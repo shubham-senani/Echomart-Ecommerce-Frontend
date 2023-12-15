@@ -5,7 +5,7 @@ function UserProfilePage() {
   return (
     <div>
       <NavBar>
-        <h1 className='mx-auto text-2xl'>My Profile</h1>
+        <h1 className='m-2 text-2xl font-medium'>My Profile</h1>
         <UserProfile></UserProfile>
       </NavBar>
     </div>
