@@ -61,7 +61,7 @@ export default function CheckoutForm() {
       elements,
       confirmParams: {
         // Make sure to change this to your payment completion page
-        return_url: `http://localhost:3000/order-success/${currentOrder._id}`,
+        return_url: `https://657c880b1ade910b0846dd7d--chic-pie-6e2053.netlify.app/order-success/${currentOrder._id}`,
       },
     });
 

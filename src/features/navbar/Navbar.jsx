@@ -130,8 +130,11 @@ function NavBar({ children }) {
                             )}
                           </>
                         ) : (
-                          <Link to={"/signup"} className="bg-white text-black border rounded mx-2">
-                            SignUp
+                          <Link
+                            to={"/signup"}
+                            className="bg-white font-bold text-black border rounded me-3 tracking-wide text-base px-2"
+                          >
+                            Signup
                           </Link>
                         )}
 
@@ -186,7 +189,10 @@ function NavBar({ children }) {
                             </Transition>
                           </Menu>
                         ) : (
-                          <Link to={"/login"} className="bg-white text-black border rounded">
+                          <Link
+                            to={"/login"}
+                            className="bg-white font-bold text-black border rounded ms-1 tracking-wide text-base px-2"
+                          >
                             {" "}
                             Login
                           </Link>
@@ -215,7 +221,7 @@ function NavBar({ children }) {
                       ) : (
                         <Link
                           to={"/login"}
-                          className="bg-white text-black px-1 border rounded font-medium"
+                          className="bg-white font-bold text-black border rounded me-3 tracking-wide text-base px-2"
                         >
                           Login
                         </Link>
@@ -231,7 +237,7 @@ function NavBar({ children }) {
                         <Disclosure.Button
                           key={item.name}
                           as="a"
-                          href={item.href}
+                          href={item.link}
                           className={classNames(
                             item.current
                               ? "bg-gray-900 text-white"
@@ -290,7 +296,9 @@ function NavBar({ children }) {
                             </button>
                           </Link>
                         ) : (
-                          <button>login</button>
+                          <button className="bg-white font-bold text-black bordser rounded me-3 tracking-wide text-base px-2">
+                            login
+                          </button>
                         )}
                         {items.length > 0 && (
                           <span className="inline-flex items-center rounded-md bg-red-50 mb-7 -ml-3 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-inset ring-red-600/10">
@@ -300,14 +308,13 @@ function NavBar({ children }) {
                       </div>
                       <div className="mt-3 space-y-1 px-2">
                         {userNavigation.map((item) => (
-                          <Disclosure.Button
+                          <Link
                             key={item.name}
-                            as="a"
-                            href={item.href}
+                            to={item.link}
                             className="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white"
                           >
                             {item.name}
-                          </Disclosure.Button>
+                          </Link>
                         ))}
                       </div>
                     </div>
